@@ -73,7 +73,7 @@ before_install:
 # turn this back on when npm settles down/we find a swagger2openapi replacement
 #- npm install -g swagger2openapi@2.11.16
 # decrypt migration before initial build
-- scripts/decrypt.sh
+#- scripts/decrypt.sh
 # turn this back on with updates to swagger (particularly swagger-maven-plugin), current implementation is too non-deterministic
 #- scripts/check-swagger.sh
 # codacy hookup

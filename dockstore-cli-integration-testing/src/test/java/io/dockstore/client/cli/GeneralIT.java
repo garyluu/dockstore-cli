@@ -17,7 +17,6 @@
 package io.dockstore.client.cli;
 
 import io.dockstore.common.CommonTestUtilities;
-import io.dockstore.common.ConfidentialTest;
 import io.dockstore.common.ToilCompatibleTest;
 import io.dockstore.common.ToolTest;
 import io.dropwizard.testing.ResourceHelpers;
@@ -34,7 +33,7 @@ import org.junit.experimental.categories.Category;
  *
  * @author aduncan
  */
-@Category({ ConfidentialTest.class, ToolTest.class })
+@Category({ ToolTest.class })
 public class GeneralIT extends BaseIT {
 
     @Rule

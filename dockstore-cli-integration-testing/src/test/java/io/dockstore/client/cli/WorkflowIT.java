@@ -25,7 +25,6 @@ import java.util.Optional;
 
 import com.google.common.collect.Lists;
 import io.dockstore.common.CommonTestUtilities;
-import io.dockstore.common.ConfidentialTest;
 import io.dockstore.common.SourceControl;
 import io.dockstore.common.WorkflowTest;
 import io.dropwizard.testing.ResourceHelpers;
@@ -58,7 +57,7 @@ import static org.junit.Assert.assertTrue;
  *
  * @author dyuen
  */
-@Category({ ConfidentialTest.class, WorkflowTest.class })
+@Category({ WorkflowTest.class })
 public class WorkflowIT extends BaseIT {
 
     @Rule

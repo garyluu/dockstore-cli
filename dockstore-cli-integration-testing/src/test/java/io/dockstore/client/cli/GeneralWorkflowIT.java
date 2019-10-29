@@ -20,7 +20,6 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 import io.dockstore.common.CommonTestUtilities;
-import io.dockstore.common.ConfidentialTest;
 import io.dockstore.common.SlowTest;
 import io.dockstore.common.SourceControl;
 import io.dockstore.common.ToilCompatibleTest;
@@ -57,7 +56,7 @@ import static org.junit.Assert.fail;
  * This test suite will have tests for the workflow mode of the Dockstore Client.
  * Created by aduncan on 05/04/16.
  */
-@Category({ ConfidentialTest.class, WorkflowTest.class })
+@Category({ WorkflowTest.class })
 public class GeneralWorkflowIT extends BaseIT {
 
     @Rule

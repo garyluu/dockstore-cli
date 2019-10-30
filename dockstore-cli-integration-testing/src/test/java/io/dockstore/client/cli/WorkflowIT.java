@@ -74,7 +74,7 @@ public class WorkflowIT extends BaseIT {
     @Before
     @Override
     public void resetDBBetweenTests() throws Exception {
-        CommonTestUtilities.cleanStatePrivate2(SUPPORT, false);
+        CommonTestUtilities.dropAndCreateWithTestData(SUPPORT, false);
     }
 
     @Test

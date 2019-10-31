@@ -1,0 +1,5 @@
+token: foobar1
+server-url: http://127.0.0.1:8080
+
+[dcc_storage]
+client=/icgc/icgc-storage-client-1.0.10/bin/icgc-storage-client

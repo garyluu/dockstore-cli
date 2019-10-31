@@ -48,21 +48,21 @@ public final class CommonTestUtilities {
     public static final int WAIT_TIME = 60000;
     public static final String PUBLIC_CONFIG_PATH = ResourceHelpers.resourceFilePath("dockstore.yml");
     /**
-     * confidential testing config, includes keys
+     * scrubbed testing config, includes keys
      */
-    public static final String CONFIDENTIAL_CONFIG_PATH;
+    public static final String SCRUBBED_CONFIG_PATH;
     static final String DUMMY_TOKEN_1 = "08932ab0c9ae39a880905666902f8659633ae0232e94ba9f3d2094cb928397e7";
     private static final Logger LOG = LoggerFactory.getLogger(CommonTestUtilities.class);
 
     static {
-        String confidentialConfigPath = null;
+        String scrubbedConfigPath = null;
         try {
-            confidentialConfigPath = ResourceHelpers.resourceFilePath("dockstoreTest.yml");
+            scrubbedConfigPath = ResourceHelpers.resourceFilePath("dockstoreTest.yml");
         } catch (Exception e) {
-            LOG.error("Confidential Dropwizard configuration file not found.", e);
+            LOG.error("scrubbed Dropwizard configuration file not found.", e);
 
         }
-        CONFIDENTIAL_CONFIG_PATH = confidentialConfigPath;
+        SCRUBBED_CONFIG_PATH = scrubbedConfigPath;
     }
 
     private CommonTestUtilities() {
@@ -76,7 +76,7 @@ public final class CommonTestUtilities {
      * @throws Exception
      */
     public static void dropAndRecreateNoTestData(DropwizardTestSupport<DockstoreWebserviceConfiguration> support) throws Exception {
-        dropAndRecreateNoTestData(support, CONFIDENTIAL_CONFIG_PATH);
+        dropAndRecreateNoTestData(support, SCRUBBED_CONFIG_PATH);
     }
 
     public static void dropAndRecreateNoTestData(DropwizardTestSupport<DockstoreWebserviceConfiguration> support,
@@ -89,19 +89,19 @@ public final class CommonTestUtilities {
     }
 
     /**
-     * Drops the database and recreates from migrations for non-confidential tests
+     * Drops the database and recreates from migrations for non-scrubbed tests
      *
      * @param support reference to testing instance of the dockstore web service
      * @throws Exception
      */
     public static void dropAndCreateWithTestData(DropwizardTestSupport<DockstoreWebserviceConfiguration> support, boolean isNewApplication)
         throws Exception {
-        dropAndCreateWithTestData(support, isNewApplication, CONFIDENTIAL_CONFIG_PATH);
+        dropAndCreateWithTestData(support, isNewApplication, SCRUBBED_CONFIG_PATH);
     }
 
     public static void dropAndCreateWithTestData(DropwizardTestSupport<DockstoreWebserviceConfiguration> support, boolean isNewApplication,
         String dropwizardConfigurationFile) throws Exception {
-        LOG.info("Dropping and Recreating the database with non-confidential test data");
+        LOG.info("Dropping and Recreating the database with non-scrubbed test data");
         Application<DockstoreWebserviceConfiguration> application;
         if (isNewApplication) {
             application = support.newApplication();
@@ -134,20 +134,20 @@ public final class CommonTestUtilities {
     }
 
     /**
-     * Wrapper for dropping and recreating database from migrations for test confidential 1
+     * Wrapper for dropping and recreating database from migrations for test scrubbed 1
      *
      * @param support reference to testing instance of the dockstore web service
      * @throws Exception
      */
     public static void cleanStatePrivate1(DropwizardTestSupport<DockstoreWebserviceConfiguration> support) throws Exception {
-        LOG.info("Dropping and Recreating the database with confidential 1 test data");
-        cleanStatePrivate1(support, CONFIDENTIAL_CONFIG_PATH);
+        LOG.info("Dropping and Recreating the database with scrubbed 1 test data");
+        cleanStatePrivate1(support, SCRUBBED_CONFIG_PATH);
         // TODO: it looks like gitlab's API has gone totally unresponsive, delete after recovery
         // getTestingPostgres(SUPPORT).runUpdateStatement("delete from token where tokensource = 'gitlab.com'");
     }
 
     /**
-     * Drops and recreates database from migrations for test confidential 1
+     * Drops and recreates database from migrations for test scrubbed 1
      *
      * @param support    reference to testing instance of the dockstore web service
      * @param configPath
@@ -161,13 +161,13 @@ public final class CommonTestUtilities {
         List<String> migrationList = Arrays.asList("1.3.0.generated", "1.3.1.consistency");
         runMigration(migrationList, application, configPath);
 
-        migrationList = Collections.singletonList("../dockstore-webservice/src/main/resources/migrations.test.confidential1.xml");
+        migrationList = Collections.singletonList("../dockstore-webservice/src/main/resources/migrations.test.scrubbed1.xml");
         runExternalMigration(migrationList, application, configPath);
 
         migrationList = Arrays.asList("1.4.0", "1.5.0");
         runMigration(migrationList, application, configPath);
 
-        migrationList = Collections.singletonList("../dockstore-webservice/src/main/resources/migrations.test.confidential1_1.5.0.xml");
+        migrationList = Collections.singletonList("../dockstore-webservice/src/main/resources/migrations.test.scrubbed1_1.5.0.xml");
         runExternalMigration(migrationList, application, configPath);
 
         migrationList = Arrays.asList("1.6.0", "1.7.0");
@@ -196,21 +196,21 @@ public final class CommonTestUtilities {
     }
 
     /**
-     * Wrapper for dropping and recreating database from migrations for test confidential 2
+     * Wrapper for dropping and recreating database from migrations for test scrubbed 2
      *
      * @param support reference to testing instance of the dockstore web service
      * @throws Exception
      */
     public static void cleanStatePrivate2(DropwizardTestSupport<DockstoreWebserviceConfiguration> support, boolean isNewApplication)
         throws Exception {
-        LOG.info("Dropping and Recreating the database with confidential 2 test data");
-        cleanStatePrivate2(support, CONFIDENTIAL_CONFIG_PATH, isNewApplication);
+        LOG.info("Dropping and Recreating the database with scrubbed 2 test data");
+        cleanStatePrivate2(support, SCRUBBED_CONFIG_PATH, isNewApplication);
         // TODO: You can uncomment the following line to disable GitLab tool and workflow discovery
         // getTestingPostgres(SUPPORT).runUpdateStatement("delete from token where tokensource = 'gitlab.com'");
     }
 
     /**
-     * Drops and recreates database from migrations for test confidential 2
+     * Drops and recreates database from migrations for test scrubbed 2
      *
      * @param support    reference to testing instance of the dockstore web service
      * @param configPath
@@ -229,13 +229,13 @@ public final class CommonTestUtilities {
         List<String> migrationList = Arrays.asList("1.3.0.generated", "1.3.1.consistency");
         runMigration(migrationList, application, configPath);
 
-        migrationList = Collections.singletonList("../dockstore-webservice/src/main/resources/migrations.test.confidential2.xml");
+        migrationList = Collections.singletonList("../dockstore-webservice/src/main/resources/migrations.test.scrubbed2.xml");
         runExternalMigration(migrationList, application, configPath);
 
         migrationList = Arrays.asList("1.4.0", "1.5.0");
         runMigration(migrationList, application, configPath);
 
-        migrationList = Collections.singletonList("../dockstore-webservice/src/main/resources/migrations.test.confidential2_1.5.0.xml");
+        migrationList = Collections.singletonList("../dockstore-webservice/src/main/resources/migrations.test.scrubbed2_1.5.0.xml");
         runExternalMigration(migrationList, application, configPath);
 
         migrationList = Arrays.asList("1.6.0", "1.7.0");
@@ -252,10 +252,10 @@ public final class CommonTestUtilities {
     public static void setupSamePathsTest(DropwizardTestSupport<DockstoreWebserviceConfiguration> support) throws Exception {
         LOG.info("Migrating samepaths migrations");
         Application<DockstoreWebserviceConfiguration> application = support.newApplication();
-        application.run("db", "drop-all", "--confirm-delete-everything", CONFIDENTIAL_CONFIG_PATH);
+        application.run("db", "drop-all", "--confirm-delete-everything", SCRUBBED_CONFIG_PATH);
         application
-            .run("db", "migrate", CONFIDENTIAL_CONFIG_PATH, "--include", "1.3.0.generated,1.3.1.consistency,1.4.0,1.5.0,1.6.0,samepaths");
-        application.run("db", "migrate", CONFIDENTIAL_CONFIG_PATH, "--include", "1.7.0");
+            .run("db", "migrate", SCRUBBED_CONFIG_PATH, "--include", "1.3.0.generated,1.3.1.consistency,1.4.0,1.5.0,1.6.0,samepaths");
+        application.run("db", "migrate", SCRUBBED_CONFIG_PATH, "--include", "1.7.0");
 
     }
 
@@ -269,10 +269,10 @@ public final class CommonTestUtilities {
     public static void setupTestWorkflow(DropwizardTestSupport<DockstoreWebserviceConfiguration> support) throws Exception {
         LOG.info("Migrating testworkflow migrations");
         Application<DockstoreWebserviceConfiguration> application = support.getApplication();
-        application.run("db", "drop-all", "--confirm-delete-everything", CONFIDENTIAL_CONFIG_PATH);
+        application.run("db", "drop-all", "--confirm-delete-everything", SCRUBBED_CONFIG_PATH);
         List<String> migrationList = Arrays
             .asList("1.3.0.generated", "1.3.1.consistency", "test", "1.4.0", "testworkflow", "1.5.0", "test_1.5.0", "1.6.0", "1.7.0");
-        runMigration(migrationList, application, CONFIDENTIAL_CONFIG_PATH);
+        runMigration(migrationList, application, SCRUBBED_CONFIG_PATH);
     }
 
     public static ImmutablePair<String, String> runOldDockstoreClient(File dockstore, String[] commandArray) throws RuntimeException {

@@ -1,0 +1,1271 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<!--
+  ~    Copyright 2017 OICR
+  ~
+  ~    Licensed under the Apache License, Version 2.0 (the "License");
+  ~    you may not use this file except in compliance with the License.
+  ~    You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~    Unless required by applicable law or agreed to in writing, software
+  ~    distributed under the License is distributed on an "AS IS" BASIS,
+  ~    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~    See the License for the specific language governing permissions and
+  ~    limitations under the License.
+  -->
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd"
+                   context="test.scrubbed1">
+    <changeSet author="dyuen (generated)" id="1511391103510-3">
+        <insert tableName="enduser">
+            <column name="id" valueNumeric="1"/>
+            <column name="avatarurl"/>
+            <column name="bio"/>
+            <column name="company"/>
+            <column name="email"/>
+            <column name="isadmin" valueBoolean="true"/>
+            <column name="location"/>
+            <column name="username" value="DockstoreTestUser"/>
+        </insert>
+        <insert tableName="enduser">
+            <column name="id" valueNumeric="2"/>
+            <column name="avatarurl"/>
+            <column name="bio"/>
+            <column name="company"/>
+            <column name="email"/>
+            <column name="isadmin" valueBoolean="true"/>
+            <column name="location"/>
+            <column name="username" value="admin@admin.com"/>
+        </insert>
+    </changeSet>
+    <changeSet author="dyuen (generated)" id="1511391103510-4">
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="1"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay bitbucket&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="2"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="3"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay bitbucket&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="4"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="5"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="6"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="7"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="8"/>
+            <column name="content" value="task hello {  String name  command {    echo &quot;hello ${name}!&quot;  }  output {    File response = stdout()  }} workflow test {  call hello}"/>
+            <column name="path" value="/Dockstore.wdl"/>
+            <column name="type" value="DOCKSTORE_WDL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="9"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="10"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="11"/>
+            <column name="content" value="task hello {  String name  command {    echo &quot;hello ${name}!&quot;  }  output {    File response = stdout()  }} workflow test {  call hello}"/>
+            <column name="path" value="/Dockstore.wdl"/>
+            <column name="type" value="DOCKSTORE_WDL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="12"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="13"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay&quot; dct:creator:   foaf:name: &quot;Dockstore Test User&quot; "/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="14"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="15"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="16"/>
+            <column name="content" value="task hello {  String name  command {    echo &quot;hello ${name}!&quot;  }  output {    File response = stdout()  }} workflow test {  call hello}"/>
+            <column name="path" value="/Dockstore.wdl"/>
+            <column name="type" value="DOCKSTORE_WDL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="17"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="18"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="19"/>
+            <column name="content" value="task hello {  String name  command {    echo &quot;hello ${name}!&quot;  }  output {    File response = stdout()  } } workflow test {  call hello}"/>
+            <column name="path" value="/Dockstore.wdl"/>
+            <column name="type" value="DOCKSTORE_WDL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="20"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="21"/>
+            <column name="content" value="task hello {  String name  command {    echo &quot;hello ${name}!&quot;  }"/>
+            <column name="path" value="/Dockstore.wdl"/>
+            <column name="type" value="DOCKSTORE_WDL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="22"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="23"/>
+            <column name="content" value="task hello {  String name  command {    echo &quot;hello ${name}!&quot;  }"/>
+            <column name="path" value="/Dockstore.wdl"/>
+            <column name="type" value="DOCKSTORE_WDL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="24"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="25"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay bitbucket&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="26"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="27"/>
+            <column name="content" value="description: &quot;Whalesay deep quotes&quot; id: &quot;dockstore-whalesay&quot; label: &quot;dockstore whalesay bitbucket&quot; dct:creator:  foaf:name: &quot;Dockstore Test User&quot;"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="28"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="29"/>
+            <column name="content" value="task hello { String pattern File in command { egrep '${pattern}' '${in}' } runtime { docker: &quot;broadinstitute/my_image&quot; } output { Array[String] matches = read_lines(stdout()) }} workflow wf { call hello }"/>
+            <column name="path" value="/Dockstore.wdl"/>
+            <column name="type" value="DOCKSTORE_WDL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="30"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="31"/>
+            <column name="content" value="cwlVersion: v1.0 class: CommandLineTool baseCommand: echo inputs: message: type: string inputBinding: position: 1 outputs: []"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="32"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="33"/>
+            <column name="content" value="cwlVersion: v1.0 class: CommandLineTool baseCommand: echo inputs:  message:    type: string    inputBinding:      position: 1 outputs: []"/>
+            <column name="path" value="/Dockstore.cwl"/>
+            <column name="type" value="DOCKSTORE_CWL"/>
+        </insert>
+        <insert tableName="sourcefile">
+            <column name="id" valueNumeric="34"/>
+            <column name="content" value="FROM docker/whalesay:latest RUN apt-get -y update &amp;&amp; apt-get install -y fortunes CMD /usr/games/fortune -a | cowsay"/>
+            <column name="path" value="/Dockerfile"/>
+            <column name="type" value="DOCKERFILE"/>
+        </insert>
+    </changeSet>
+    <changeSet author="dyuen (generated)" id="1511391103510-5">
+        <insert tableName="tag">
+            <column name="id" valueNumeric="9"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-12 12:55:15.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="false"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="10"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-12 12:55:16.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="false"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="11"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-12 15:08:37.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="false"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="12"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-12 15:08:38.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="false"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="13"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-27 17:03:58.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference"/>
+            <column name="valid" valueBoolean="false"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="false"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="1"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-11 12:45:44.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="2"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-11 12:45:45.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="3"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-02-04 16:43:17.0"/>
+            <column name="name" value="test"/>
+            <column name="reference" value="feature/test"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="9612df14f1b72af05e5c1a8c5d24b8937b22064e14cba1dc06505a310f82f026"/>
+            <column name="size" valueNumeric="108608258"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="4"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-02-16 17:07:26.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="5"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-02-16 17:07:27.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="6"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-02-04 16:42:59.0"/>
+            <column name="name" value="test"/>
+            <column name="reference" value="feature/test"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="60b25334e557a97722503a62db6d4e17bc660286379c2a7348d79307fe054a4e"/>
+            <column name="size" valueNumeric="108608286"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="7"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-02-16 17:07:29.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="cabaccb1c28f624c7796657a970f08895f6d8bf14644045f08c535ed5b424abc"/>
+            <column name="size" valueNumeric="108600810"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="8"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-02-16 17:07:30.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="cabaccb1c28f624c7796657a970f08895f6d8bf14644045f08c535ed5b424abc"/>
+            <column name="size" valueNumeric="108600810"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="14"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-02-17 09:20:40.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="15"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-02-17 09:20:42.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="16"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-11 12:45:44.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="17"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-11 12:45:45.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="18"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-12 15:08:37.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="false"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="19"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-01-12 15:08:38.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="false"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="4728f8f5ce1709ec8b8a5282e274e63de3c67b95f03a519191e6ea675c5d34e8"/>
+            <column name="size" valueNumeric="127185992"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="20"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-10-26 15:53:46.0"/>
+            <column name="name" value="wdltest"/>
+            <column name="reference" value="wdltest"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="eab9898bfc2294b7d6774cfc26ec0768b17fa6a53ea02cf3c0e73dd4e621a3c7"/>
+            <column name="size" valueNumeric="109341656"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="21"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-10-26 15:36:14.0"/>
+            <column name="name" value="master"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="8e59c8669007bfc2873b34e7e7100248550661686c8652de83bacac6f3769cdf"/>
+            <column name="size" valueNumeric="109341731"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="22"/>
+            <column name="dirtybit" valueBoolean="false"/>
+            <column name="hidden" valueBoolean="false"/>
+            <column name="lastmodified" valueDate="2016-10-26 15:36:17.0"/>
+            <column name="name" value="latest"/>
+            <column name="reference" value="master"/>
+            <column name="valid" valueBoolean="true"/>
+            <column name="verified" valueBoolean="false"/>
+            <column name="verifiedsource"/>
+            <column name="automated" valueBoolean="true"/>
+            <column name="cwlpath" value="/Dockstore.cwl"/>
+            <column name="dockerfilepath" value="/Dockerfile"/>
+            <column name="imageid" value="8e59c8669007bfc2873b34e7e7100248550661686c8652de83bacac6f3769cdf"/>
+            <column name="size" valueNumeric="109341731"/>
+            <column name="wdlpath" value="/Dockstore.wdl"/>
+        </insert>
+    </changeSet>
+    <changeSet author="dyuen (generated)" id="1511391103510-6">
+        <insert tableName="token">
+            <column name="id" valueNumeric="1"/>
+            <column name="content" value="foobar1"/>
+            <column name="refreshtoken"/>
+            <column name="tokensource" value="dockstore"/>
+            <column name="userid" valueNumeric="1"/>
+            <column name="username" value="DockstoreTestUser"/>
+        </insert>
+        <insert tableName="token">
+            <column name="id" valueNumeric="4"/>
+            <column name="content" value="foobar"/>
+            <column name="refreshtoken"/>
+            <column name="tokensource" value="quay.io"/>
+            <column name="userid" valueNumeric="1"/>
+            <column name="username" value="dockstoretestuser"/>
+        </insert>
+        <insert tableName="token">
+            <column name="id" valueNumeric="5"/>
+            <column name="content" value="foobar"/>
+            <column name="refreshtoken"/>
+            <column name="tokensource" value="gitlab.com"/>
+            <column name="userid" valueNumeric="1"/>
+            <column name="username" value="dockstore.test.user"/>
+        </insert>
+        <insert tableName="token">
+            <column name="id" valueNumeric="6"/>
+            <column name="content" value="foobar2"/>
+            <column name="refreshtoken"/>
+            <column name="tokensource" value="dockstore"/>
+            <column name="userid" valueNumeric="2"/>
+            <column name="username" value="admin@admin.com"/>
+        </insert>
+    </changeSet>
+    <changeSet author="dyuen (generated)" id="1511391103510-7">
+        <insert tableName="tool">
+            <column name="id" valueNumeric="1"/>
+            <column name="author" value="Dockstore Test User"/>
+            <column name="defaultversion"/>
+            <column name="description" value="Whalesay deep quotes"/>
+            <column name="email" value=""/>
+            <column name="giturl" value="git@github.com:DockstoreTestUser/dockstore-whalesay.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-02-16 17:04:59.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="test_org_repo"/>
+            <column name="namespace" value="dockstore"/>
+            <column name="path" value="quay.io/dockstore/test_org_repo"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="2"/>
+            <column name="author" value="Dockstore Test User"/>
+            <column name="defaultversion"/>
+            <column name="description" value="Whalesay deep quotes"/>
+            <column name="email" value=""/>
+            <column name="giturl" value="git@github.com:DockstoreTestUser/dockstore-whalesay.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-02-16 17:04:59.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="quayandgithub"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/quayandgithub"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="3"/>
+            <column name="author" value="Dockstore Test User"/>
+            <column name="defaultversion"/>
+            <column name="description" value="Whalesay deep quotes"/>
+            <column name="email" value=""/>
+            <column name="giturl" value="git@bitbucket.org:DockstoreTestUser/dockstore-whalesay.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-01-11 12:43:27.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="quayandbitbucket"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/quayandbitbucket"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="4"/>
+            <column name="author"/>
+            <column name="defaultversion"/>
+            <column name="description"/>
+            <column name="email" value=""/>
+            <column name="giturl" value="git@github.com:DockstoreTestUser/dockstore-whalesay-alternate.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-01-12 12:52:45.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="quayandgithubalternate"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/quayandgithubalternate"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="5"/>
+            <column name="author"/>
+            <column name="defaultversion"/>
+            <column name="description"/>
+            <column name="email" value=""/>
+            <column name="giturl" value="git@bitbucket.org:DockstoreTestUser/quayandbitbucketalternate.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-01-12 15:05:43.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="quayandbitbucketalternate"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/quayandbitbucketalternate"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="6"/>
+            <column name="author"/>
+            <column name="defaultversion"/>
+            <column name="description"/>
+            <column name="email" value=""/>
+            <column name="giturl"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-01-27 17:01:41.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_WITH_MIXED"/>
+            <column name="name" value="noautobuild"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/noautobuild"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="7"/>
+            <column name="author"/>
+            <column name="defaultversion"/>
+            <column name="description"/>
+            <column name="email" value=""/>
+            <column name="giturl"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="nobuildsatall"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/nobuildsatall"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="8"/>
+            <column name="author"/>
+            <column name="defaultversion"/>
+            <column name="description"/>
+            <column name="email" value=""/>
+            <column name="giturl" value="git@github.com:DockstoreTestUser/dockstore-whalesay-wdl.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-02-17 09:18:11.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="quayandgithubwdl"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/quayandgithubwdl"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="9"/>
+            <column name="author" value="Dockstore Test User"/>
+            <column name="defaultversion"/>
+            <column name="description" value="Whalesay deep quotes"/>
+            <column name="email" value=""/>
+            <column name="giturl" value="git@gitlab.com:dockstore.test.user/dockstore-whalesay.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-01-11 12:43:27.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="quayandgitlab"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/quayandgitlab"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="10"/>
+            <column name="author"/>
+            <column name="defaultversion"/>
+            <column name="description"/>
+            <column name="email" value=""/>
+            <column name="giturl" value="git@gitlab.com:dockstore.test.user/quayandgitlabalternate.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-03-15 11:36:04.551"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-01-12 15:05:43.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="quayandgitlabalternate"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/quayandgitlabalternate"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="11"/>
+            <column name="author"/>
+            <column name="defaultversion"/>
+            <column name="description" value=""/>
+            <column name="email"/>
+            <column name="giturl" value="git@github.com:DockstoreTestUser/dockstore_parameter_test.git"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated" valueDate="2016-10-26 16:10:29.2"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile" value=""/>
+            <column name="defaulttestwdlparameterfile" value=""/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild" valueDate="2016-10-26 15:52:39.0"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="test_input_json"/>
+            <column name="namespace" value="dockstoretestuser"/>
+            <column name="path" value="quay.io/dockstoretestuser/test_input_json"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail" value=""/>
+            <column name="toolname" value=""/>
+        </insert>
+        <insert tableName="tool">
+            <column name="id" valueNumeric="12"/>
+            <column name="author"/>
+            <column name="defaultversion"/>
+            <column name="description"/>
+            <column name="email"/>
+            <column name="giturl"/>
+            <column name="ispublished" valueBoolean="false"/>
+            <column name="lastmodified"/>
+            <column name="lastupdated"/>
+            <column name="defaultcwlpath" value="/Dockstore.cwl"/>
+            <column name="defaultdockerfilepath" value="/Dockerfile"/>
+            <column name="defaulttestcwlparameterfile"/>
+            <column name="defaulttestwdlparameterfile"/>
+            <column name="defaultwdlpath" value="/Dockstore.wdl"/>
+            <column name="lastbuild"/>
+            <column name="mode" value="AUTO_DETECT_QUAY_TAGS_AUTOMATED_BUILDS"/>
+            <column name="name" value="test1"/>
+            <column name="namespace" value="test_org"/>
+            <column name="path" value="quay.io/test_org/test1"/>
+            <column name="privateaccess" valueBoolean="false"/>
+            <column name="registry" value="QUAY_IO"/>
+            <column name="toolmaintaineremail"/>
+            <column name="toolname" value=""/>
+        </insert>
+    </changeSet>
+    <changeSet author="dyuen (generated)" id="1511391103510-8">
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="1"/>
+            <column name="tagid" valueNumeric="6"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="1"/>
+            <column name="tagid" valueNumeric="7"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="1"/>
+            <column name="tagid" valueNumeric="8"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="2"/>
+            <column name="tagid" valueNumeric="3"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="2"/>
+            <column name="tagid" valueNumeric="4"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="2"/>
+            <column name="tagid" valueNumeric="5"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="3"/>
+            <column name="tagid" valueNumeric="1"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="3"/>
+            <column name="tagid" valueNumeric="2"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="4"/>
+            <column name="tagid" valueNumeric="9"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="4"/>
+            <column name="tagid" valueNumeric="10"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="5"/>
+            <column name="tagid" valueNumeric="11"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="5"/>
+            <column name="tagid" valueNumeric="12"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="6"/>
+            <column name="tagid" valueNumeric="13"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="8"/>
+            <column name="tagid" valueNumeric="14"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="8"/>
+            <column name="tagid" valueNumeric="15"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="9"/>
+            <column name="tagid" valueNumeric="16"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="9"/>
+            <column name="tagid" valueNumeric="17"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="10"/>
+            <column name="tagid" valueNumeric="18"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="10"/>
+            <column name="tagid" valueNumeric="19"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="11"/>
+            <column name="tagid" valueNumeric="20"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="11"/>
+            <column name="tagid" valueNumeric="21"/>
+        </insert>
+        <insert tableName="tool_tag">
+            <column name="toolid" valueNumeric="11"/>
+            <column name="tagid" valueNumeric="22"/>
+        </insert>
+    </changeSet>
+    <changeSet author="dyuen (generated)" id="1511391103510-9">
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="1"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="2"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="3"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="4"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="5"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="6"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="7"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="8"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="9"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="10"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="1"/>
+            <column name="entryid" valueNumeric="11"/>
+        </insert>
+        <insert tableName="user_entry">
+            <column name="userid" valueNumeric="2"/>
+            <column name="entryid" valueNumeric="12"/>
+        </insert>
+    </changeSet>
+    <changeSet author="dyuen (generated)" id="1511391103510-10">
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="1"/>
+            <column name="sourcefileid" valueNumeric="1"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="1"/>
+            <column name="sourcefileid" valueNumeric="2"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="2"/>
+            <column name="sourcefileid" valueNumeric="3"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="2"/>
+            <column name="sourcefileid" valueNumeric="4"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="3"/>
+            <column name="sourcefileid" valueNumeric="5"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="3"/>
+            <column name="sourcefileid" valueNumeric="6"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="4"/>
+            <column name="sourcefileid" valueNumeric="7"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="4"/>
+            <column name="sourcefileid" valueNumeric="8"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="4"/>
+            <column name="sourcefileid" valueNumeric="9"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="5"/>
+            <column name="sourcefileid" valueNumeric="11"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="5"/>
+            <column name="sourcefileid" valueNumeric="12"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="5"/>
+            <column name="sourcefileid" valueNumeric="10"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="6"/>
+            <column name="sourcefileid" valueNumeric="14"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="6"/>
+            <column name="sourcefileid" valueNumeric="13"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="7"/>
+            <column name="sourcefileid" valueNumeric="17"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="7"/>
+            <column name="sourcefileid" valueNumeric="15"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="7"/>
+            <column name="sourcefileid" valueNumeric="16"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="8"/>
+            <column name="sourcefileid" valueNumeric="18"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="8"/>
+            <column name="sourcefileid" valueNumeric="19"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="8"/>
+            <column name="sourcefileid" valueNumeric="20"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="14"/>
+            <column name="sourcefileid" valueNumeric="21"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="14"/>
+            <column name="sourcefileid" valueNumeric="22"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="15"/>
+            <column name="sourcefileid" valueNumeric="23"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="15"/>
+            <column name="sourcefileid" valueNumeric="24"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="16"/>
+            <column name="sourcefileid" valueNumeric="25"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="16"/>
+            <column name="sourcefileid" valueNumeric="26"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="17"/>
+            <column name="sourcefileid" valueNumeric="27"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="17"/>
+            <column name="sourcefileid" valueNumeric="28"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="20"/>
+            <column name="sourcefileid" valueNumeric="29"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="20"/>
+            <column name="sourcefileid" valueNumeric="30"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="21"/>
+            <column name="sourcefileid" valueNumeric="31"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="21"/>
+            <column name="sourcefileid" valueNumeric="32"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="22"/>
+            <column name="sourcefileid" valueNumeric="33"/>
+        </insert>
+        <insert tableName="version_sourcefile">
+            <column name="versionid" valueNumeric="22"/>
+            <column name="sourcefileid" valueNumeric="34"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="dyuen" id="custom_test_sequence1">
+        <sql>alter sequence container_id_seq increment by 50 restart with 1000</sql>
+    </changeSet>
+    <changeSet author="dyuen" id="custom_test_sequence2">
+        <sql>alter sequence tag_id_seq increment by 50 restart with 1000</sql>
+    </changeSet>
+    <changeSet author="dyuen" id="custom_test_sequence3">
+        <sql>alter sequence sourcefile_id_seq increment by 50 restart with 1000</sql>
+    </changeSet>
+    <changeSet author="dyuen" id="custom_test_sequence4">
+        <sql>alter sequence label_id_seq increment by 50 restart with 1000</sql>
+    </changeSet>
+    <changeSet id="new_test_user" author="agduncan">
+        <insert tableName="enduser">
+            <column name="id" valueNumeric="3"/>
+            <column name="avatarurl"/>
+            <column name="bio"/>
+            <column name="company"/>
+            <column name="email"/>
+            <column name="isadmin" valueBoolean="false"/>
+            <column name="location"/>
+            <column name="username" value="OtherUser"/>
+        </insert>
+        <insert tableName="token">
+            <column name="id" valueNumeric="7"/>
+            <column name="content" value="foobar3"/>
+            <column name="refreshtoken"/>
+            <column name="tokensource" value="dockstore"/>
+            <column name="userid" valueNumeric="3"/>
+            <column name="username" value="OtherUser"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

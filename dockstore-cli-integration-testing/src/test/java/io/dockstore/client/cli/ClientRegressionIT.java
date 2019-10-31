@@ -85,7 +85,7 @@ public class ClientRegressionIT extends BaseIT {
     @Before
     @Override
     public void resetDBBetweenTests() throws Exception {
-        CommonTestUtilities.dropAndCreateWithTestData(SUPPORT, false);
+        CommonTestUtilities.cleanStatePrivate1(SUPPORT);
         Client.DEBUG.set(false);
     }
 

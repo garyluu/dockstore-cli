@@ -1,9 +1,8 @@
 version: 2
 jobs:
   build:
-    machine:
-      image:
-        ubuntu-1604:201903-01
+    macos:
+      xcode: 11.3.1
     steps:
       - run:
           name: try to use rootless docker
